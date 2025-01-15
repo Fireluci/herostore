@@ -1,30 +1,25 @@
-#(©)CodeXBotz
-
-
-
-
 import os
 import logging
 from logging.handlers import RotatingFileHandler
 
-TG_BOT_TOKEN = os.environ.get("TG_BOT_TOKEN", "6094762122:AAFIPVQa4wM4-A_-wQD9RTU8OMkpnzUxaNs")
+TG_BOT_TOKEN = os.environ.get("TG_BOT_TOKEN", "8191103559:AAEgESzX7D181JR9VPQtjV674EVY-KXuNCY")
 APP_ID = int(os.environ.get("APP_ID", "1736204"))
 API_HASH = os.environ.get("API_HASH", "890d40e0f91a4de32dec2965444b2cbe")
-CHANNEL_ID = int(os.environ.get("CHANNEL_ID", "-1001205507869"))
+CHANNEL_ID = int(os.environ.get("CHANNEL_ID", "-1002347173260"))
 OWNER_ID = int(os.environ.get("OWNER_ID", "1058015838"))
 PORT = os.environ.get("PORT", "8080")
-DB_URI = os.environ.get("DATABASE_URL", "mongodb+srv://cinestore:cinestore@cinestore.gxqbify.mongodb.net/?retryWrites=true&w=majority")
-DB_NAME = os.environ.get("DATABASE_NAME", "FileStore")
+DB_URI = os.environ.get("DATABASE_URL", "mongodb+srv://herostore:herostore@cluster0.ar695.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+DB_NAME = os.environ.get("DATABASE_NAME", "herostore")
 
 
 
 
 #SHORTLINK
 SHORTLINK_URL = os.environ.get('SHORTLINK_URL', "speedlinkurl.com")
-SHORTLINK_API = os.environ.get('SHORTLINK_API', "0f21e6cca0630bacba8575fb8b6e26a363c42714")
+SHORTLINK_API = os.environ.get('SHORTLINK_API', "92b2db25784eb5b76f69f486258df058454d005c")
 
 #force sub channel id, if you want enable force sub
-FORCE_SUB_CHANNEL = int(os.environ.get("FORCE_SUB_CHANNEL", "0"))
+FORCE_SUB_CHANNEL = int(os.environ.get("FORCE_SUB_CHANNEL", "-1002048881772"))
 
 TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "4"))
 
@@ -32,7 +27,7 @@ TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "4"))
 START_MSG = os.environ.get("START_MESSAGE", "Hello {first}\n\nI can store private files in Specified Channel and other users can access it from special link.")
 try:
     ADMINS=[]
-    for x in (os.environ.get("ADMINS", "5051689666 1058015838").split()):
+    for x in (os.environ.get("ADMINS", "1058015838").split()):
         ADMINS.append(int(x))
 except ValueError:
         raise Exception("Your Admins list does not contain valid integers.")
