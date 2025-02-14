@@ -15,8 +15,8 @@ DB_NAME = os.environ.get("DATABASE_NAME", "herostore")
 
 
 #SHORTLINK
-SHORTLINK_URL = os.environ.get('SHORTLINK_URL', "speedlinkurl.com")
-SHORTLINK_API = os.environ.get('SHORTLINK_API', "92b2db25784eb5b76f69f486258df058454d005c")
+SHORTLINK_URL = os.environ.get('SHORTLINK_URL', "easysky.in")
+SHORTLINK_API = os.environ.get('SHORTLINK_API', "640eb2125f39b0e70aa9f1baee312655c8f676cd")
 
 #force sub channel id, if you want enable force sub
 FORCE_SUB_CHANNEL = int(os.environ.get("FORCE_SUB_CHANNEL", "-1002048881772"))
