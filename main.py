@@ -1,27 +1,13 @@
 import asyncio
 import os
-import config
 from bot import Bot
+from pyrogram import idle
 
 BOT_TOKENS = []
 
-# 1️⃣ Collect from config.py
-for attr in dir(config):
-    if attr.startswith("BOT_TOKEN"):
-        token = getattr(config, attr)
-        if token:
-            BOT_TOKENS.append(token)
-
-# 2️⃣ Collect from environment variables (Koyeb)
 for key, value in os.environ.items():
-    if key.startswith("BOT_TOKEN"):
+    if key.startswith("BOT_TOKEN") and value:
         BOT_TOKENS.append(value)
-
-# Remove duplicates
-BOT_TOKENS = list(set(BOT_TOKENS))
-
-if not BOT_TOKENS:
-    raise ValueError("No BOT_TOKEN variables found in config or environment.")
 
 bots = []
 
@@ -32,6 +18,9 @@ async def main():
     for bot in bots:
         await bot.start()
 
-    await asyncio.Event().wait()
+    await idle()  # IMPORTANT
+
+    for bot in bots:
+        await bot.stop()
 
 asyncio.run(main())
