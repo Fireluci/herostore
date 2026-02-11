@@ -11,7 +11,8 @@ APP_ID = int(os.environ.get("APP_ID", "1736204"))
 API_HASH = os.environ.get("API_HASH", "890d40e0f91a4de32dec2965444b2cbe")
 CHANNEL_ID = int(os.environ.get("CHANNEL_ID", "-1002347173260"))
 OWNER_ID = int(os.environ.get("OWNER_ID", "1058015838"))
-PORT = os.environ.get("PORT", "8080")
+PORT = int(os.environ.get("PORT", 8080))
+
 DB_URI = os.environ.get("DATABASE_URL", "mongodb+srv://herostore:herostore@herostore.ywtvule.mongodb.net/?appName=herostore")
 DB_NAME = os.environ.get("DATABASE_NAME", "herostore")
 
