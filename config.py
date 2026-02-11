@@ -12,14 +12,14 @@ API_HASH = os.environ.get("API_HASH", "890d40e0f91a4de32dec2965444b2cbe")
 CHANNEL_ID = int(os.environ.get("CHANNEL_ID", "-1002347173260"))
 OWNER_ID = int(os.environ.get("OWNER_ID", "1058015838"))
 PORT = os.environ.get("PORT", "8080")
-DB_URI = os.environ.get("DATABASE_URL", "mongodb+srv://herostore:herostore@cluster0.ar695.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+DB_URI = os.environ.get("DATABASE_URL", "mongodb+srv://herostore:herostore@herostore.evhnve1.mongodb.net/?appName=herostore")
 DB_NAME = os.environ.get("DATABASE_NAME", "herostore")
 
 SHORTLINK_URL = os.environ.get('SHORTLINK_URL', "easysky.in")
 SHORTLINK_API = os.environ.get('SHORTLINK_API', "640eb2125f39b0e70aa9f1baee312655c8f676cd")
 
 #force sub channel id, if you want enable force sub
-FORCE_SUB_CHANNEL = int(os.environ.get("FORCE_SUB_CHANNEL", "-1002048881772"))
+FORCE_SUB_CHANNEL = int(os.environ.get("FORCE_SUB_CHANNEL", ""))
 
 TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "4"))
 
